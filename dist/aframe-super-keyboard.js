@@ -276,12 +276,6 @@ AFRAME.registerComponent('super-keyboard', {
     this.keyBgColor.set(this.data.keyBgColor);
     this.keyHoverColor.set(this.data.keyHoverColor);
     this.keyPressColor.set(this.data.keyPressColor);
-
-    if (this.data.show) {
-      this.open();
-    } else {
-      this.close();
-    }
   },
 
   tick: function (time) {
