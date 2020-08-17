@@ -104,17 +104,8 @@ AFRAME.registerComponent('super-keyboard', {
     this.keyPressColor = new THREE.Color();
 
     var self = this;
-    document.addEventListener('keydown', function (ev) {
-      if (ev.key === 't') {
-        var ss = '';
-        var s = 'abcdefghijklmopqrstuvQWIEUTGASDLIGKBXACQWETL102394676457';
-        var l = Math.floor(Math.random() * 20);
-        for (var i = 0; i < l; i++) ss += s[Math.floor(Math.random() * s.length)];
-        self.el.setAttribute('super-keyboard', {value: ss});
-      }
-    });
 
-    // document.addEventListener('show', this.open.bind(this));
+    document.addEventListener('show', this.open.bind(this));
 
     this.hand = null;
     this.handListenersSet = false;
